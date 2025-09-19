@@ -1,0 +1,16 @@
+volumes:
+  postgis-data:
+    driver: local
+
+services:
+  db:
+    image: postgis/postgis:14-3.5-alpine
+    container_name: oskari_dev_db
+    environment:
+      - POSTGRES_DB=oskaridb
+      - POSTGRES_USER=$OSKARI_DB_USER
+      - POSTGRES_PASSWORD=$OSKARI_DB_PASSWORD
+    ports:
+      - ${OSKARI_DB_PORT}:5432
+    volumes:
+      - postgis-data:/var/lib/postgresql/data

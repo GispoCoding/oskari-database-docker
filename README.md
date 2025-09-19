@@ -1,10 +1,10 @@
 # oskari-database-docker
 
-This Docker container provides a minimal working database setup for Oskari, intended for use in Oskari development. It initializes the Oskari database following the guidelines outlined in the [Oskari documentation](https://oskari.org/documentation/docs/latest/3-Setup-instructions#Setup-database).
+This docker container provides a minimal working database setup for Oskari, intended for use in Oskari development. It initializes the Oskari database following the guidelines outlined in the [Oskari documentation](https://oskari.org/documentation/docs/latest/2-Setup-instructions#Setup-database).
 
 ## Requirements
 
-- Docker Compose (tested with Docker Desktop v.4.17)
+- Docker Compose or podman-compose (tested with Podman 4.9.3 and podman-compose 1.0.6)
 
 ## Steps to run
 
@@ -21,4 +21,4 @@ This Docker container provides a minimal working database setup for Oskari, inte
 
 3. Start the database
 
-- docker compose up db
+- ```docker compose up db``` or ```podman-compose up```
